@@ -139,32 +139,32 @@ function toggleDarkMode() {
   // Update images based on the new dark mode setting
   setImageForDarkMode(
     'site-image1',
-    './images/Dark Images/Untitled (1).jpeg',
+    './images/Dark Images/Untitled (1).webp',
     './images/New Images/256436-P4QWCA-715.jpg'
   );
   setImageForDarkMode(
     'site-image2',
-    './images/Dark Images/Untitled.jpeg',
+    './images/Dark Images/Untitled.webp',
     './images/New Images/6155818.jpg'
   );
   setImageForDarkMode(
     'site-image3',
-    './images/Dark Images/Untitled (2).jpeg',
+    './images/Dark Images/Untitled (2).webp',
     './images/New Images/460557-PFQ5QV-679.jpg'
   );
   setImageForDarkMode(
     'site-image4',
-    './images/Dark Images/Untitled (3).jpeg',
+    './images/Dark Images/Untitled (3).webp',
     './images/New Images/7566.jpg'
   );
   setImageForDarkMode(
     'site-image5',
-    './images/Dark Images/Untitled (5).jpeg',
+    './images/Dark Images/Untitled (5).webp',
     './images/New Images/4208421.jpg'
   );
   setImageForDarkMode(
     'site-image6',
-    './images/Dark Images/Untitled (4).jpeg',
+    './images/Dark Images/Untitled (4).webp',
     './images/New Images/5035121.jpg'
   );
 }
@@ -172,32 +172,32 @@ function toggleDarkMode() {
 // Set initial images based on dark mode
 setImageForDarkMode(
   'site-image1',
-  './images/Dark Images/Untitled (1).jpeg',
+  './images/Dark Images/Untitled (1).webp',
   './images/New Images/256436-P4QWCA-715.jpg'
 );
 setImageForDarkMode(
   'site-image2',
-  './images/Dark Images/Untitled.jpeg',
+  './images/Dark Images/Untitled.webp',
   './images/New Images/6155818.jpg'
 );
 setImageForDarkMode(
   'site-image3',
-  './images/Dark Images/Untitled (2).jpeg',
+  './images/Dark Images/Untitled (2).webp',
   './images/New Images/460557-PFQ5QV-679.jpg'
 );
 setImageForDarkMode(
   'site-image4',
-  './images/Dark Images/Untitled (3).jpeg',
+  './images/Dark Images/Untitled (3).webp',
   './images/New Images/7566.jpg'
 );
 setImageForDarkMode(
   'site-image5',
-  './images/Dark Images/Untitled (5).jpeg',
+  './images/Dark Images/Untitled (5).webp',
   './images/New Images/4208421.jpg'
 );
 setImageForDarkMode(
   'site-image6',
-  './images/Dark Images/Untitled (4).jpeg',
+  './images/Dark Images/Untitled (4).webp',
   './images/New Images/5035121.jpg'
 );
 
