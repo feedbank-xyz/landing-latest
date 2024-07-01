@@ -28,6 +28,7 @@
     fetch(e.href, l);
   }
 })();
+
 let s = document.querySelectorAll(".faq");
 for (let t = 0; t < s.length; t++) {
   let r = s[t].querySelector(".faq-answer"),
@@ -47,37 +48,38 @@ for (let t = 0; t < s.length; t++) {
         o.classList.replace("rotate-0", "rotate-180"));
   });
 }
+
 let d = document.querySelectorAll(".switcher");
-localStorage.getItem("color-theme") === "dark" ||
-(!("color-theme" in localStorage) &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ? document.documentElement.classList.add("dark")
-  : document.documentElement.classList.remove("dark");
+
+if (!localStorage.getItem("color-theme")) {
+  localStorage.setItem("color-theme", "light");
+}
+document.documentElement.classList.remove("dark");
+
 d.forEach((t) => {
   t.addEventListener("click", function () {
-    localStorage.getItem("color-theme")
-      ? localStorage.getItem("color-theme") === "light"
-        ? (document.documentElement.classList.add("dark"),
-          localStorage.setItem("color-theme", "dark"))
-        : (document.documentElement.classList.remove("dark"),
-          localStorage.setItem("color-theme", "light"))
-      : document.documentElement.classList.contains("dark")
+    localStorage.getItem("color-theme") === "dark"
       ? (document.documentElement.classList.remove("dark"),
         localStorage.setItem("color-theme", "light"))
       : (document.documentElement.classList.add("dark"),
         localStorage.setItem("color-theme", "dark"));
+
+    toggleDarkMode();
   });
 });
+
 let i = document.querySelectorAll(".tab"),
   a = document.querySelector(".tab-indicator"),
   u = document.querySelectorAll(".panel"),
   m = document.querySelectorAll(".panel-preview");
+
 a !== null &&
   ((a.style.width = i[0].getBoundingClientRect().width + "px"),
   (a.style.left =
     i[0].getBoundingClientRect().left -
     i[0].parentElement.getBoundingClientRect().left +
     "px"));
+
 i.forEach((t) => {
   t.addEventListener("click", () => {
     let r = t.getAttribute("aria-controls");
@@ -111,17 +113,16 @@ i.forEach((t) => {
       });
   });
 });
+
 const f = document.querySelector("#hamburger"),
   g = document.querySelector("#navbar");
+
 f.addEventListener("click", () => {
   g.classList.toggle("navbar-active");
 });
 
-//Dark and light modes for Images
-let darkMode =
-  localStorage.getItem("color-theme") === "dark" ||
-  (!("color-theme" in localStorage) &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches);
+// Dark and light modes for Images
+let darkMode = localStorage.getItem("color-theme") === "dark";
 
 function setImageForDarkMode(imageId, darkImagePath, lightImagePath) {
   const img = document.getElementById(imageId);
@@ -136,73 +137,71 @@ function toggleDarkMode() {
   darkMode = !darkMode;
   localStorage.setItem("color-theme", darkMode ? "dark" : "light");
 
-  // Update images based on the new dark mode setting
   setImageForDarkMode(
-    'site-image1',
-    './images/Dark Images/Untitled (1).webp',
-    './images/New Images/256436-P4QWCA-715.jpg'
+    "site-image1",
+    "./images/Dark Images/Untitled (1).webp",
+    "./images/New Images/256436-P4QWCA-715.jpg"
   );
   setImageForDarkMode(
-    'site-image2',
-    './images/Dark Images/Untitled.webp',
-    './images/New Images/6155818.jpg'
+    "site-image2",
+    "./images/Dark Images/Untitled.webp",
+    "./images/New Images/6155818.jpg"
   );
   setImageForDarkMode(
-    'site-image3',
-    './images/Dark Images/Untitled (2).webp',
-    './images/New Images/460557-PFQ5QV-679.jpg'
+    "site-image3",
+    "./images/Dark Images/Untitled (2).webp",
+    "./images/New Images/460557-PFQ5QV-679.jpg"
   );
   setImageForDarkMode(
-    'site-image4',
-    './images/Dark Images/Untitled (3).webp',
-    './images/New Images/7566.jpg'
+    "site-image4",
+    "./images/Dark Images/Untitled (3).webp",
+    "./images/New Images/7566.jpg"
   );
   setImageForDarkMode(
-    'site-image5',
-    './images/Dark Images/Untitled (5).webp',
-    './images/New Images/4208421.jpg'
+    "site-image5",
+    "./images/Dark Images/Untitled (5).webp",
+    "./images/New Images/4208421.jpg"
   );
   setImageForDarkMode(
-    'site-image6',
-    './images/Dark Images/Untitled (4).webp',
-    './images/New Images/5035121.jpg'
+    "site-image6",
+    "./images/Dark Images/Untitled (4).webp",
+    "./images/New Images/5035121.jpg"
   );
 }
 
-// Set initial images based on dark mode
 setImageForDarkMode(
-  'site-image1',
-  './images/Dark Images/Untitled (1).webp',
-  './images/New Images/256436-P4QWCA-715.jpg'
+  "site-image1",
+  "./images/Dark Images/Untitled (1).webp",
+  "./images/New Images/256436-P4QWCA-715.jpg"
 );
 setImageForDarkMode(
-  'site-image2',
-  './images/Dark Images/Untitled.webp',
-  './images/New Images/6155818.jpg'
+  "site-image2",
+  "./images/Dark Images/Untitled.webp",
+  "./images/New Images/6155818.jpg"
 );
 setImageForDarkMode(
-  'site-image3',
-  './images/Dark Images/Untitled (2).webp',
-  './images/New Images/460557-PFQ5QV-679.jpg'
+  "site-image3",
+  "./images/Dark Images/Untitled (2).webp",
+  "./images/New Images/460557-PFQ5QV-679.jpg"
 );
 setImageForDarkMode(
-  'site-image4',
-  './images/Dark Images/Untitled (3).webp',
-  './images/New Images/7566.jpg'
+  "site-image4",
+  "./images/Dark Images/Untitled (3).webp",
+  "./images/New Images/7566.jpg"
 );
 setImageForDarkMode(
-  'site-image5',
-  './images/Dark Images/Untitled (5).webp',
-  './images/New Images/4208421.jpg'
+  "site-image5",
+  "./images/Dark Images/Untitled (5).webp",
+  "./images/New Images/4208421.jpg"
 );
 setImageForDarkMode(
-  'site-image6',
-  './images/Dark Images/Untitled (4).webp',
-  './images/New Images/5035121.jpg'
+  "site-image6",
+  "./images/Dark Images/Untitled (4).webp",
+  "./images/New Images/5035121.jpg"
 );
 
 // Update images when dark mode is toggled
-document.querySelectorAll('.dark-mode-toggle').forEach((toggleButton) => {
+document.querySelectorAll(".dark-mode-toggle").forEach((toggleButton) => {
   toggleButton.addEventListener("click", toggleDarkMode);
 });
 
